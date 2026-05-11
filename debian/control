@@ -1,0 +1,28 @@
+Source: python-runs
+Section: python
+Priority: optional
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ pybuild-plugin-pyproject,
+ python3-all,
+ python3-hatchling,
+Standards-Version: 4.7.0
+Homepage: https://github.com/rec/runs
+Rules-Requires-Root: no
+Vcs-Git: https://github.com/Vitexus/runs.git
+Vcs-Browser: https://github.com/Vitexus/runs
+
+Package: python3-runs
+Architecture: all
+Multi-Arch: foreign
+Depends:
+ python3-xmod,
+ ${misc:Depends},
+ ${python3:Depends},
+Description: Run a block of text as a subprocess
+ runs provides a simple interface for running shell commands and
+ capturing their output from Python.
+ .
+ This package provides the Python 3 library.
